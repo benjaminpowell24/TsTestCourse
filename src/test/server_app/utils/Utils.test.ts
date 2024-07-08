@@ -48,7 +48,7 @@ requestMock.on.mockImplementation((event, cb) => {
 
 const actual = getRequestBody(requestMock as any)
 
-await expect(actual).rejects.toThrow(someError)
+await expect(actual).rejects.toThrow(someError.message)
 })
 
 
