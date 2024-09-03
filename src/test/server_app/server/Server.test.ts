@@ -47,9 +47,9 @@ describe('Server test suite', () => {
     jest.clearAllMocks()
   })
 
-  it('should start server now', () => {
-    sut.startServer();
-
+  it('should start server now', async() => {
+    await sut.startServer();
     expect(serverMock.listen).toHaveBeenCalledWith(8080)
+    expect(responseMock.end).toHaveBeenCalled()
   })
 })
