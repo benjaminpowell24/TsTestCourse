@@ -50,6 +50,4 @@ const actual = getRequestBody(requestMock as any)
 
 await expect(actual).rejects.toThrow(someError.message)
 })
-
-
 })
